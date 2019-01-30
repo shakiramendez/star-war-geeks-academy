@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Menu from './components/menu';
+import Peliculas from './paginas/Peliculas';
+import Personajes from './paginas/personajes';
+import Planetas from './paginas/planetas';
+import Vehiculos from './paginas/vehiculos';
+import Cruceros from './paginas/cruceros'
 import './App.css';
+import Slider from './components/slider'
+import {Link, Route, Switch} from 'react-router-dom';
+
+
+
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Menu/>
+        <Slider/>
+        <Route path="/pelicula" component={Peliculas}/>
+        <Route path="/personaje" component={Personajes}/>
+        <Route path="/planeta" component={Planetas}/>
+        <Route path="/vehiculo" component={Vehiculos}/>
+        <Route path="/crucero" component={Cruceros}/>
+
+        
       </div>
     );
   }

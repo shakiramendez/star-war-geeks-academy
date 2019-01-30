@@ -9,9 +9,12 @@ background-size: cover;
 }
 
 
+
 .menu-image{
-  width: 100%;
+  width:  100%;
 }
+
+
 
 .slide.current img{
   width: 100%;
